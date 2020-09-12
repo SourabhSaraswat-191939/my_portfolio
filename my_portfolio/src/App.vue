@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div>
+  <v-app-bar hide-on-scroll color="#002984">
+    <v-toolbar-title>
+      APP TITLE
+    </v-toolbar-title>
+      <v-card-actions />
+      <v-card-actions>
+    <v-btn>Home</v-btn>
+      </v-card-actions>
+
+      <v-card-actions>
+    <v-btn>Login</v-btn>
+      </v-card-actions>
+  </v-app-bar>
+  <Login />
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Login from './components/Login';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Login,
+  },
+
+  data: () => ({
+    showPassword:false,
+  }),
+};
+</script>
