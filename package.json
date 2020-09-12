@@ -1,0 +1,19 @@
+{
+  "name": "sourabh-portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio . I am creating it from scratch using Vue .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SourabhSaraswat/my_portfolio.git"
+  },
+  "author": "Sourabh Saraswat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SourabhSaraswat/my_portfolio/issues"
+  },
+  "homepage": "https://github.com/SourabhSaraswat/my_portfolio#readme"
+}
