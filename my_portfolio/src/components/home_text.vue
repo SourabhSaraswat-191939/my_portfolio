@@ -1,6 +1,8 @@
 <template>
     <div class="container">
         <!-- <button_popper /> -->
+        <img src="../assets/mine.png" height="50%" width="50%"/>
+        <br>
         <h1 class="name">SOURABH SARASWAT</h1>
         <sub_text>I am a Full Stack Web Developer</sub_text>
     </div>
@@ -28,13 +30,20 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
     align-content: center;
     text-align: center;
-    border: solid red 2px;
+    
     width: 50%;
     float: left;
     height: 100vh;
 
+
+}
+
+img{
+  margin-left:auto;
+  margin-right:auto;
 
 }
 

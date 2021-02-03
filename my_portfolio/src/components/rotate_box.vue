@@ -4,35 +4,71 @@
 
 
 <div class="radio-toolbar">
-      <input type="radio" :checked="front" id="radio-front" name="select-face"/>
-  <label for="radio-front" @click="front!=front">
-        On</label> 
+      <input type="radio" checked id="radio-front" name="select-face"/>
+  <label for="radio-front">
+        Home</label> 
 
-      <input type="radio" :checked="back" id="radio-back" name="select-face"/>
-        <label for="radio-back" @click="back!=back">
-        On</label>
+      <input type="radio" id="radio-back" name="select-face"/>
+        <label for="radio-back">
+        Details</label>
 
-      <input type="radio" v-model="left" id="radio-left" name="select-face"/>
-        <label for="radio-left" @click="left!=left">
-        On</label>
+      <input type="radio" id="radio-left" name="select-face"/>
+        <label for="radio-left">
+        Social Media</label>
 
-      <input type="radio" v-model="right" id="radio-right" name="select-face"/>
-        <label for="radio-right" @click="right!=right">
-        On</label>
+      <input type="radio" id="radio-right" name="select-face"/>
+        <label for="radio-right">
+        About</label>
 
-      <input type="radio" v-model="top" id="radio-top" name="select-face"/>
-        <label for="radio-top" @click="top!=top">
-        On</label>
+      <input type="radio" id="radio-top" name="select-face"/>
+        <label for="radio-top">
+        Projects</label>
 
-      <input type="radio" v-model="bottom" id="radio-bottom" name="select-face"/>
-        <label for="radio-bottom" @click="bottom!=bottom">
-        On</label>
+      <input type="radio" id="radio-bottom" name="select-face"/>
+        <label for="radio-bottom">
+        Experience</label>
+
+
+
+
   <div class="scene">
   <div v-bind:class="{cube:true,show_front:class_list==='back'}">
-    <div v-bind:class="{cube__face:true, cube__face__front:true}">front</div>
-    <div v-bind:class="{cube__face:true, cube__face__back:true, show_right:class_list==='back'}">back</div>
+
+    <div v-bind:class="{cube__face:true, cube__face__front:true}">
+      <div class="heading">.... Welcome To My Portfolio ....</div>
+      <br><br>
+      Make stuff that people wants
+      
+    </div>
+
+
+    <div v-bind:class="{cube__face:true, cube__face__back:true, show_right:class_list==='back'}"></div>
     <div v-bind:class="{cube__face:true, cube__face__right:true, show_back:class_list==='right'}">right</div>
-    <div v-bind:class="{cube__face:true, cube__face__left:true, show_left:class_list==='left'}">left</div>
+
+
+    <div v-bind:class="{cube__face:true, cube__face__social_links:true, show_left:class_list==='left'}">
+      <div class="heading" style="background: linear-gradient(10deg,#304352,#d7d2cc);">Social Links</div>
+      <br><br>
+      <div class="social_links">
+        <v-icon large>mdi-email-multiple</v-icon> saraswatsourabh5@gmail.com
+        <br>
+        <a href="https://www.linkedin.com/in/sourabh-saraswat-1681b61a5/" target="_blank">
+          <v-icon  large>mdi-linkedin</v-icon> Sourabh Saraswat
+        </a>
+        <br>
+        <a href="https://www.instagram.com/ssaraswat/" target="_blank">
+          <v-icon  large>mdi-instagram</v-icon> @ssaraswat
+        </a>
+        <br>
+        <a href="https://twitter.com/SourabhSarasw15" target="_blank">
+          <v-icon  large>mdi-twitter</v-icon> @SourabhSarasw15
+        </a>
+        <br>
+        <a href="https://www.facebook.com/sourabh.saraswat.73/" target="_blank">
+          <v-icon color="green darken-2"  large>mdi-facebook</v-icon> Sourabh Saraswat
+        </a>
+      </div>
+    </div>
     <div v-bind:class="{cube__face:true, cube__face__top:true, show_top:class_list==='top'}">top</div>
     <div v-bind:class="{cube__face:true, cube__face__bottom:true, show_bottom:class_list==='bottom'}">bottom</div>
 
@@ -41,9 +77,7 @@
 </div>
 
   </center>
-  <div v-bind:class="{change:true, mystyle:class_list}"></div>
-  <button @click="rotate">left</button>
-    
+
 </div>
 
 </template>
@@ -60,20 +94,10 @@ export default {
 
   data: () => ({
     // collapseOnScroll: true,
-    class_list:false,
-
-
-    front:true,
-    back:false,
-    left:false,
-    right:false,
-    top:false,
-    bottom:false,
+    
   }),
   methods: {
-      rotate(){
-            this.class_list = 'back'
-      }
+      
   },
 };
 </script>
@@ -94,16 +118,18 @@ export default {
 
 .radio-toolbar label {
     display: inline-block;
-    background-color: #ddd;
+    background: linear-gradient(120deg,#f46b45,#eea849);;
     padding: 10px 20px;
+    margin: 5px;
     font-family: sans-serif, Arial;
     font-size: 16px;
     border: 2px solid #444;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .radio-toolbar label:hover {
-  background-color: #dfd;
+  background:#eea849;
 }
 
 .radio-toolbar input[type="radio"]:focus + label {
@@ -111,8 +137,8 @@ export default {
 }
 
 .radio-toolbar input[type="radio"]:checked + label {
-    background-color: #bfb;
-    border-color: #4c4;
+    background: linear-gradient(120deg,#f46b45,#eea849);;
+    border-color: #fff;
 }
 
 #radio-back:checked ~ .scene .cube{
@@ -139,7 +165,7 @@ export default {
 }
 
 .scene {
-  margin: 100px;
+  margin: 130px;
   width: 400px;
   height: 400px;
   /* border:solid 2px black; */
@@ -160,15 +186,20 @@ export default {
   height: inherit;
   position: absolute;
   background: red;
-  opacity: 0.8;
+  opacity: 1;
+  text-align: center;
+  
 }
 
-.cube { transform: translateZ(-100px); }
+.cube { 
+  margin-top:10vh ;
+  transform: translateZ(00px); 
+  }
 
-.cube__face__front  {background:yellow; transform: rotateY(  0deg) translateZ(200px); }
+.cube__face__front  {background:#fff;color:black; transform: rotateY(  0deg) translateZ(200px); }
 .cube__face__right  { transform: rotateY( 90deg) translateZ(200px); }
 .cube__face__back   {background:blue; transform: rotateY(180deg) translateZ(200px); }
-.cube__face__left   { transform: rotateY(-90deg) translateZ(200px); }
+.cube__face__social_links   {background:linear-gradient(10deg,#304352,#d7d2cc);transform: rotateY(-90deg) translateZ(200px); }
 .cube__face__top    { transform: rotateX( 90deg) translateZ(200px); }
 .cube__face__bottom { transform: rotateX(-90deg) translateZ(200px); }
 
@@ -181,4 +212,20 @@ export default {
 .show_bottom:hover { transform: translateZ(-100px) rotateX(  90deg); } */
 
 
+
+.heading{
+  margin-top:10%;
+  font-size:1.7em;
+  font-weight: 700;
+  
+}
+
+.social_links{
+  margin-left: 10%;
+  text-align: left;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
 </style>
