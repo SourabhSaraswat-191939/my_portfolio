@@ -1,7 +1,8 @@
 <template>
     <div id="arrow">
+        Click
         <v-icon x-large>mdi-arrow-down-drop-circle-outline</v-icon>
-        dsadas
+        Here
     </div>
 </template>
 
@@ -14,6 +15,7 @@
     bottom: 0;
     width: 100%;
     text-align: center;
+    font-size: 160%;
 }
 
 

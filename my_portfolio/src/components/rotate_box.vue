@@ -4,23 +4,28 @@
 
 
 <div class="radio-toolbar">
-  <label for="radio-front" @click="front!=front">
       <input type="radio" :checked="front" id="radio-front" name="select-face"/>
-        On</label>    
-        <label for="radio-back" @click="back!=back">
+  <label for="radio-front" @click="front!=front">
+        On</label> 
+
       <input type="radio" :checked="back" id="radio-back" name="select-face"/>
+        <label for="radio-back" @click="back!=back">
         On</label>
-        <label for="radio-left" @click="left!=left">
+
       <input type="radio" v-model="left" id="radio-left" name="select-face"/>
+        <label for="radio-left" @click="left!=left">
         On</label>
-        <label for="radio-right" @click="right!=right">
+
       <input type="radio" v-model="right" id="radio-right" name="select-face"/>
+        <label for="radio-right" @click="right!=right">
         On</label>
-        <label for="radio-top" @click="top!=top">
+
       <input type="radio" v-model="top" id="radio-top" name="select-face"/>
+        <label for="radio-top" @click="top!=top">
         On</label>
-        <label for="radio-bottom" @click="bottom!=bottom">
+
       <input type="radio" v-model="bottom" id="radio-bottom" name="select-face"/>
+        <label for="radio-bottom" @click="bottom!=bottom">
         On</label>
   <div class="scene">
   <div v-bind:class="{cube:true,show_front:class_list==='back'}">
@@ -82,7 +87,7 @@ export default {
 .radio-toolbar input[type="radio"] {
   /* opacity: 0; */
   position:absolute;
-  
+  opacity: 0;
   border: solid red 2px;
   width: 10px;
 }
