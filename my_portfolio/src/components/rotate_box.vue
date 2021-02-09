@@ -1,24 +1,16 @@
 <template>
-<div>
+<div style="position:relative;">
   <center>
 
 
 <div class="radio-toolbar">
       <input type="radio" checked id="radio-front" name="select-face"/>
-  <label for="radio-front">
+        <label for="radio-front">
         Home</label> 
 
       <input type="radio" id="radio-back" name="select-face"/>
         <label for="radio-back">
-        Details</label>
-
-      <input type="radio" id="radio-left" name="select-face"/>
-        <label for="radio-left">
-        Social Media</label>
-
-      <input type="radio" id="radio-right" name="select-face"/>
-        <label for="radio-right">
-        About</label>
+        Skills</label>
 
       <input type="radio" id="radio-top" name="select-face"/>
         <label for="radio-top">
@@ -27,6 +19,14 @@
       <input type="radio" id="radio-bottom" name="select-face"/>
         <label for="radio-bottom">
         Experience</label>
+
+      <input type="radio" id="radio-left" name="select-face"/>
+        <label for="radio-left">
+        Social Media</label>
+
+      <input type="radio" id="radio-right" name="select-face"/>
+        <label for="radio-right">
+        About</label>
 
 
 
@@ -37,40 +37,146 @@
     <div v-bind:class="{cube__face:true, cube__face__front:true}">
       <div class="heading">.... Welcome To My Portfolio ....</div>
       <br><br>
-      Make stuff that people wants
+      I Create stuff that people wants
+      <br><br><br>
+      <v-btn
+        class="ma-2"
+        outlined
+        color="indigo"
+        href="https://drive.google.com/file/d/1VODVJc-fjm1MaWaeX_hcsbYSk0skHMbs/view?usp=sharing"
+        target="_blank"
+        
+      >
+          <v-icon light>mdi-file-document</v-icon>
+          My Resume
+      </v-btn>
       
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__back:true, show_right:class_list==='back'}"></div>
-    <div v-bind:class="{cube__face:true, cube__face__right:true, show_back:class_list==='right'}">right</div>
+    <div v-bind:class="{cube__face:true, cube__face__back:true, show_right:class_list==='back'}">
+      <div class="heading" style="background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb);">Technical Skills</div>
+      <br><br>
+      <div class="text-center">
+        <v-chip class="ma-2 " color="yellow">
+          HTML
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          CSS
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          JAVASCRIPT
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          PHP
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          BOOTSTRAP
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          PYTHON
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          DJANGO
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          MySQL
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          PostgreSQL
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          REST API
+        </v-chip>
+        <v-chip class="ma-2 " color="yellow">
+          VUE.js
+        </v-chip>
+        
+      </div>
+    </div>
+    
+    
+    
+    <div v-bind:class="{cube__face:true, cube__face__right:true, show_back:class_list==='right'}">
+      <div class="heading" style="background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8);">Basic Info. About Me</div>
+      <br><br>
+      Hi! myself Sourabh Saraswat. I am pursuing my undergraduation in Computer Science and Enginnering from Central University Of Haryana . I am a Full Stack Web Developer .I love to know about technologies and pretty much excited to learn new things of modern technical world .MY greatest strength is my positive attitude , even during the most hardest of times.
+      <br>I’m constantly Practicing Data Structure And Algorithms .
+
+    </div>
 
 
     <div v-bind:class="{cube__face:true, cube__face__social_links:true, show_left:class_list==='left'}">
       <div class="heading" style="background: linear-gradient(10deg,#304352,#d7d2cc);">Social Links</div>
       <br><br>
       <div class="social_links">
-        <v-icon large>mdi-email-multiple</v-icon> saraswatsourabh5@gmail.com
+        <v-icon color="#eea849" large>mdi-email-multiple</v-icon> saraswatsourabh5@gmail.com
         <br>
         <a href="https://www.linkedin.com/in/sourabh-saraswat-1681b61a5/" target="_blank">
-          <v-icon  large>mdi-linkedin</v-icon> Sourabh Saraswat
+          <v-icon color="#eea849" large>mdi-linkedin</v-icon> Sourabh Saraswat
+        </a>
+        <br>
+        <a href="https://github.com/SourabhSaraswat" target="_blank">
+          <v-icon color="#eea849" large>mdi-github</v-icon> Sourabh Saraswat
         </a>
         <br>
         <a href="https://www.instagram.com/ssaraswat/" target="_blank">
-          <v-icon  large>mdi-instagram</v-icon> @ssaraswat
+          <v-icon color="#eea849" large>mdi-instagram</v-icon> @ssaraswat
         </a>
         <br>
         <a href="https://twitter.com/SourabhSarasw15" target="_blank">
-          <v-icon  large>mdi-twitter</v-icon> @SourabhSarasw15
+          <v-icon color="#eea849" large>mdi-twitter</v-icon> @SourabhSarasw15
         </a>
         <br>
         <a href="https://www.facebook.com/sourabh.saraswat.73/" target="_blank">
-          <v-icon color="green darken-2"  large>mdi-facebook</v-icon> Sourabh Saraswat
+          <v-icon color="#eea849" large>mdi-facebook</v-icon> Sourabh Saraswat
         </a>
       </div>
     </div>
+
+
     <div v-bind:class="{cube__face:true, cube__face__top:true, show_top:class_list==='top'}">top</div>
-    <div v-bind:class="{cube__face:true, cube__face__bottom:true, show_bottom:class_list==='bottom'}">bottom</div>
+
+
+    <div v-bind:class="{cube__face:true, cube__face__bottom:true, show_bottom:class_list==='bottom'}">
+      <div class="heading" style="background: linear-gradient(10deg,#43c6ac,#191654);">My Experience</div>
+      <br><br>
+      
+        <v-container>
+          <v-row dense>
+            <v-col cols="12">
+              <v-card color="#385F73" dark>
+                <v-card-title class="headline" >
+                  <v-icon>mdi-briefcase-outline</v-icon> Full Stack Web Developer 
+                </v-card-title>
+                
+
+                <v-card-subtitle>
+                  Internship (Nov. 2020-Jan. 2021)<br>
+                  Company : Groocy</v-card-subtitle>
+              </v-card>
+            </v-col>
+          </v-row>
+          <v-row dense>
+            <v-col cols="12">
+              <v-card
+                color="#385F73"
+                dark
+              >
+                <v-card-title class="headline" >
+                  <v-icon>mdi-briefcase-outline</v-icon> Full Stack Engineer 
+                </v-card-title>
+                
+
+                <v-card-subtitle>
+                  Freelancing (Sep. 2020-Nov. 2020)<br>
+                  Company : Medicare Solutions</v-card-subtitle>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+        
+    </div>
 
   </div>
   </div>
@@ -83,13 +189,14 @@
 </template>
 
 <script>
-// import Login from './components/Login';
+
+
 
 export default {
-  name: 'App',
+  name: 'rotate_box',
 
   components: {
-    // Login,
+    
   },
 
   data: () => ({
@@ -137,7 +244,7 @@ export default {
 }
 
 .radio-toolbar input[type="radio"]:checked + label {
-    background: linear-gradient(120deg,#f46b45,#eea849);;
+    background: linear-gradient(120deg,#f46b45,#eea849);
     border-color: #fff;
 }
 
@@ -196,12 +303,12 @@ export default {
   transform: translateZ(00px); 
   }
 
-.cube__face__front  {background:#fff;color:black; transform: rotateY(  0deg) translateZ(200px); }
-.cube__face__right  { transform: rotateY( 90deg) translateZ(200px); }
-.cube__face__back   {background:blue; transform: rotateY(180deg) translateZ(200px); }
+.cube__face__front  {background:linear-gradient(0deg,rgb(0, 255, 255),#f38365,#f46b45);color:black; transform: rotateY(  0deg) translateZ(200px); }
+.cube__face__right  {background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8); transform: rotateY( 90deg) translateZ(200px); }
+.cube__face__back   {background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb); transform: rotateY(180deg) translateZ(200px); }
 .cube__face__social_links   {background:linear-gradient(10deg,#304352,#d7d2cc);transform: rotateY(-90deg) translateZ(200px); }
 .cube__face__top    { transform: rotateX( 90deg) translateZ(200px); }
-.cube__face__bottom { transform: rotateX(-90deg) translateZ(200px); }
+.cube__face__bottom {background:linear-gradient(10deg,#43c6ac,#191654);transform: rotateX(-90deg) translateZ(200px); }
 
 /* 
 .show_front  { transform: translateZ(-100px) rotateY(   0deg); }
@@ -224,8 +331,9 @@ export default {
   margin-left: 10%;
   text-align: left;
 }
-a{
+.social_links a{
   text-decoration: none;
+  text-decoration-color: #fff;
   color: #fff;
 }
 </style>

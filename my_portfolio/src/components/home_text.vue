@@ -47,7 +47,4 @@ img{
 
 }
 
-.name{
-
-}
 </style>

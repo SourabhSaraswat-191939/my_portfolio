@@ -1,36 +1,31 @@
 <template>
+<v-app>
 <div class="main">
-  <home_text />
-  <rotate_box style="float:right;"/>
-  <down_arrow />
+  
+  <home_front />
+  <!-- <div style="height:80vh;position:relative;">Sourabh Saraswat</div> -->
+  <!-- <about_me /> -->
 </div>
+</v-app>
 </template>
 
 <script>
 
-import rotate_box from "./components/rotate_box"
-import home_text from "./components/home_text"
-import down_arrow from "./components/down_arrow"
+import home_front from "./views/home_front"
+// import about_me from "./components/about_me"
 
 export default {
   name: 'App',
 
   components:{
-    rotate_box,
-    home_text,
-    down_arrow,
+    home_front,
+    // about_me,
   }
 }
 </script>
 
 
 <style scoped>
-.main{
-  width: 100%;
-  height: 100vh;
-  /* background-image: url("./assets/home_back.jpg"); */
-  /* background-size: cover; */
-  background:black;
-  color: #fff;
-}
+
+
 </style>
