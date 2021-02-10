@@ -135,7 +135,20 @@
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__top:true, show_top:class_list==='top'}">top</div>
+    <div v-bind:class="{cube__face:true, cube__face__top:true, show_top:class_list==='top'}">
+      <div class="heading" style="background: linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);">My Experience</div>
+      <br><br>
+      
+      <v-row id="cube_project" class="mx-auto brown mb-2 rounded-xl"><v-icon>mdi-arrow-right-drop-circle</v-icon>MEDICARES SOLUTIONS</v-row>
+      <v-row id="cube_project" class="mx-auto brown mb-2 rounded-xl"><v-icon>mdi-arrow-right-drop-circle</v-icon>FOOD DESK</v-row>
+      <v-row id="cube_project" class="mx-auto brown mb-2 rounded-xl"><v-icon>mdi-arrow-right-drop-circle</v-icon>HOSTEL MANAGEMENT</v-row>
+      <v-row id="cube_project" class="mx-auto brown mb-2 rounded-xl"><v-icon>mdi-arrow-right-drop-circle</v-icon>MESS MANAGEMENT</v-row>
+      <v-row id="cube_project" class="mx-auto brown mb-2 rounded-xl"><v-icon>mdi-arrow-right-drop-circle</v-icon>Medicares Solutions</v-row>
+
+      <v-row id="cube_project" class="mx-auto light-green mt-10 rounded-xl"><v-icon>mdi-arrow-down-drop-circle</v-icon>For Details Scroll Web Page</v-row>
+
+
+    </div>
 
 
     <div v-bind:class="{cube__face:true, cube__face__bottom:true, show_bottom:class_list==='bottom'}">
@@ -307,7 +320,7 @@ export default {
 .cube__face__right  {background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8); transform: rotateY( 90deg) translateZ(200px); }
 .cube__face__back   {background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb); transform: rotateY(180deg) translateZ(200px); }
 .cube__face__social_links   {background:linear-gradient(10deg,#304352,#d7d2cc);transform: rotateY(-90deg) translateZ(200px); }
-.cube__face__top    { transform: rotateX( 90deg) translateZ(200px); }
+.cube__face__top    {background:linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);transform: rotateX( 90deg) translateZ(200px); }
 .cube__face__bottom {background:linear-gradient(10deg,#43c6ac,#191654);transform: rotateX(-90deg) translateZ(200px); }
 
 /* 
@@ -335,5 +348,18 @@ export default {
   text-decoration: none;
   text-decoration-color: #fff;
   color: #fff;
+}
+
+
+#cube_project{
+  width: 80%;
+}
+
+
+@media only screen and (max-width: 960px) {
+  .home_right{
+  width: 100%;
+  height: auto;
+}
 }
 </style>

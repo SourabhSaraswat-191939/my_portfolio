@@ -1,7 +1,9 @@
 <template>
-<div class="home">
+<div class="home_container">
+  <div class="home">
     <home_text />
     <rotate_box style="float:right;"/>
+  </div>
     <a href="#aboutss"><down_arrow style="position:absolute;bottom:0;width:100%"/></a>
   
     
@@ -37,9 +39,21 @@ export default {
   background:black;
   color: #fff;
   position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
+.home_container{
+  position: relative;
+}
 
+@media only screen and (max-width: 960px) {
+  .home{
+  
+  height: auto;
+  flex-direction: column;;
+}
+}
 
 
 </style>
