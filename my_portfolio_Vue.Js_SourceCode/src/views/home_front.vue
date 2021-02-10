@@ -2,9 +2,9 @@
 <div class="home">
     <home_text />
     <rotate_box style="float:right;"/>
-    <down_arrow style="position:absolute;bottom:0;width:100%"/>
+    <a href="#aboutss"><down_arrow style="position:absolute;bottom:0;width:100%"/></a>
   
-    <!-- <about_me /> -->
+    
 </div>
 </template>
 
@@ -23,8 +23,10 @@ export default {
     home_text,
     down_arrow,
     // about_me,
-  }
+  },
+  
 }
+
 </script>
 
 

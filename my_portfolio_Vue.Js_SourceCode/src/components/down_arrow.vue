@@ -21,10 +21,6 @@
     font-size: 160%;
 }
 
-#cc{
-    /* position: static; */
-    
-}
 
 
 
