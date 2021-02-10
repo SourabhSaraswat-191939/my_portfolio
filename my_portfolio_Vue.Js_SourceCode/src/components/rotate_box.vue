@@ -98,15 +98,15 @@
     
     
     <div v-bind:class="{cube__face:true, cube__face__right:true, show_back:class_list==='right'}">
-      <div class="heading" style="background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8);">Basic Info. About Me</div>
+      <div class="heading" style="background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8);">About Me</div>
       <br><br>
       Hi! myself Sourabh Saraswat. I am pursuing my undergraduation in Computer Science and Enginnering from Central University Of Haryana . I am a Full Stack Web Developer .I love to know about technologies and pretty much excited to learn new things of modern technical world .MY greatest strength is my positive attitude , even during the most hardest of times.
-      <br>I’m constantly Practicing Data Structure And Algorithms .
+      <br>I’m constantly Practicing New Technologies .
 
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__social_links:true, show_left:class_list==='left'}">
+    <div v-bind:class="{cube__face:true, cube__face__left:true, show_left:class_list==='left'}">
       <div class="heading" style="background: linear-gradient(10deg,#304352,#d7d2cc);">Social Links</div>
       <br><br>
       <div class="social_links">
@@ -136,7 +136,7 @@
 
 
     <div v-bind:class="{cube__face:true, cube__face__top:true, show_top:class_list==='top'}">
-      <div class="heading" style="background: linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);">My Experience</div>
+      <div class="heading" style="background: linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);">My Projects</div>
       <br><br>
       
       <v-row id="cube_project" class="mx-auto brown mb-2 rounded-xl"><v-icon>mdi-arrow-right-drop-circle</v-icon>MEDICARES SOLUTIONS</v-row>
@@ -319,7 +319,7 @@ export default {
 .cube__face__front  {background:linear-gradient(0deg,rgb(0, 255, 255),#f38365,#f46b45);color:black; transform: rotateY(  0deg) translateZ(200px); }
 .cube__face__right  {background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8); transform: rotateY( 90deg) translateZ(200px); }
 .cube__face__back   {background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb); transform: rotateY(180deg) translateZ(200px); }
-.cube__face__social_links   {background:linear-gradient(10deg,#304352,#d7d2cc);transform: rotateY(-90deg) translateZ(200px); }
+.cube__face__left   {background:linear-gradient(10deg,#304352,#d7d2cc);transform: rotateY(-90deg) translateZ(200px); }
 .cube__face__top    {background:linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);transform: rotateX( 90deg) translateZ(200px); }
 .cube__face__bottom {background:linear-gradient(10deg,#43c6ac,#191654);transform: rotateX(-90deg) translateZ(200px); }
 
@@ -358,8 +358,28 @@ export default {
 
 @media only screen and (max-width: 960px) {
   .home_right{
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
+  }
+  .scene {
+    margin: 0px;
+    margin-bottom: 130px;
+    width: 320px;
+    height: 320px;
+    /* border:solid 2px black; */
+    perspective: 12100px;
+  }
+
+  .cube__face__front  {transform: rotateY(  0deg) translateZ(161px); }
+.cube__face__right  {transform: rotateY( 90deg) translateZ(161px);z-index: 1;}
+.cube__face__back   {transform: rotateY(180deg) translateZ(161px); }
+.cube__face__left   {transform: rotateY(-90deg) translateZ(161px); }
+.cube__face__top    {transform: rotateX( 90deg) translateZ(161px); }
+.cube__face__bottom {transform: rotateX(-90deg) translateZ(161px); }
+
+.cube__face{
+  overflow: scroll;
 }
+
 }
 </style>

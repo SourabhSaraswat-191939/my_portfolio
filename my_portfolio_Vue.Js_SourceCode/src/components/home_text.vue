@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <!-- <button_popper /> -->
-        <img src="../assets/mine.png" height="50%" width="50%"/>
+        <img src="../assets/mine.png" height="50%" width="100%"/>
         <br>
         <h1 class="name">SOURABH SARASWAT</h1>
         <sub_text>I am a Full Stack Web Developer</sub_text>
