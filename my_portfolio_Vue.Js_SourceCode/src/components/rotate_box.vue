@@ -32,7 +32,7 @@
 
 
   <div class="scene">
-  <div v-bind:class="{cube:true,show_front:class_list==='back'}">
+  <div v-bind:class="{cube:true}">
 
     <div v-bind:class="{cube__face:true, cube__face__front:true}">
       <div class="heading">.... Welcome To My Portfolio ....</div>
@@ -54,7 +54,7 @@
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__back:true, show_right:class_list==='back'}">
+    <div v-bind:class="{cube__face:true, cube__face__top:true}">
       <div class="heading" style="background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb);">Technical Skills</div>
       <br><br>
       <div class="text-center">
@@ -97,7 +97,7 @@
     
     
     
-    <div v-bind:class="{cube__face:true, cube__face__right:true, show_back:class_list==='right'}">
+    <div v-bind:class="{cube__face:true, cube__face__right:true}">
       <div class="heading" style="background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8);">About Me</div>
       <br><br>
       Hi! myself Sourabh Saraswat. I am pursuing my undergraduation in Computer Science and Enginnering from Central University Of Haryana . I am a Full Stack Web Developer .I love to know about technologies and pretty much excited to learn new things of modern technical world .MY greatest strength is my positive attitude , even during the most hardest of times.
@@ -106,9 +106,9 @@
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__left:true, show_left:class_list==='left'}">
+    <div v-bind:class="{cube__face:true, cube__face__left:true}">
       <div class="heading" style="background: linear-gradient(10deg,#304352,#d7d2cc);">Social Links</div>
-      <br><br>
+      <br>
       <div class="social_links">
         <v-icon color="#eea849" large>mdi-email-multiple</v-icon> saraswatsourabh5@gmail.com
         <br>
@@ -135,7 +135,7 @@
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__top:true, show_top:class_list==='top'}">
+    <div v-bind:class="{cube__face:true, cube__face__back:true}">
       <div class="heading" style="background: linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);">My Projects</div>
       <br><br>
       
@@ -151,7 +151,7 @@
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__bottom:true, show_bottom:class_list==='bottom'}">
+    <div v-bind:class="{cube__face:true, cube__face__bottom:true}">
       <div class="heading" style="background: linear-gradient(10deg,#43c6ac,#191654);">My Experience</div>
       <br><br>
       
@@ -238,7 +238,7 @@ export default {
 
 .radio-toolbar label {
     display: inline-block;
-    background: linear-gradient(120deg,#f46b45,#eea849);;
+    background: linear-gradient(120deg,#f46b45,#eea849);
     padding: 10px 20px;
     margin: 5px;
     font-family: sans-serif, Arial;
@@ -261,9 +261,9 @@ export default {
     border-color: #fff;
 }
 
-#radio-back:checked ~ .scene .cube{
+#radio-top:checked ~ .scene .cube{
     background-image: url('/assets/logo.png');
-  transform: rotateY(180deg);
+  transform: rotateX(-90deg);
 } 
 #radio-left:checked ~ .scene .cube{
   transform: rotateY(90deg);
@@ -271,8 +271,8 @@ export default {
 #radio-right:checked ~ .scene .cube{
   transform: rotateY(-90deg);
 }
-#radio-top:checked ~ .scene .cube{
-  transform: rotateX(-90deg);
+#radio-back:checked ~ .scene .cube{
+  transform: rotateY(180deg);
 }  
 #radio-bottom:checked ~ .scene .cube{
   transform: rotateX(90deg);
@@ -316,11 +316,12 @@ export default {
   transform: translateZ(00px); 
   }
 
-.cube__face__front  {background:linear-gradient(0deg,rgb(0, 255, 255),#f38365,#f46b45);color:black; transform: rotateY(  0deg) translateZ(200px); }
+/* .cube__face__front  {background:linear-gradient(0deg,rgb(0, 255, 255),#f38365,#f46b45);color:black; transform: rotateY(  0deg) translateZ(200px); } */
+.cube__face__front  {background:linear-gradient(120deg,#f46b45,#eea849);color:black; transform: rotateY(  0deg) translateZ(200px); }
 .cube__face__right  {background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8); transform: rotateY( 90deg) translateZ(200px); }
-.cube__face__back   {background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb); transform: rotateY(180deg) translateZ(200px); }
+.cube__face__top   {background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb); transform: rotateY(180deg) translateZ(200px); }
 .cube__face__left   {background:linear-gradient(10deg,#304352,#d7d2cc);transform: rotateY(-90deg) translateZ(200px); }
-.cube__face__top    {background:linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);transform: rotateX( 90deg) translateZ(200px); }
+.cube__face__back    {background:linear-gradient(10deg,#ff4b1f,#64b3f4,#c2e59c);transform: rotateX( 90deg) translateZ(200px); }
 .cube__face__bottom {background:linear-gradient(10deg,#43c6ac,#191654);transform: rotateX(-90deg) translateZ(200px); }
 
 /* 
@@ -374,7 +375,7 @@ export default {
 .cube__face__right  {transform: rotateY( 90deg) translateZ(161px);z-index: 1;}
 .cube__face__back   {transform: rotateY(180deg) translateZ(161px); }
 .cube__face__left   {transform: rotateY(-90deg) translateZ(161px); }
-.cube__face__top    {transform: rotateX( 90deg) translateZ(161px); }
+.cube__face__top    {transform: rotateX( 90deg) translateZ(161px);z-index: 1; }
 .cube__face__bottom {transform: rotateX(-90deg) translateZ(161px); }
 
 .cube__face{

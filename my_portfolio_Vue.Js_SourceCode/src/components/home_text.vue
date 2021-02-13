@@ -4,7 +4,8 @@
         <img src="../assets/mine.png" height="50%" width="50%"/>
         <br>
         <h1 class="name">SOURABH SARASWAT</h1>
-        <sub_text>I am a Full Stack Web Developer</sub_text>
+        I am a Full Stack Web Developer
+        
     </div>
 </template>
 
@@ -37,6 +38,7 @@ export default {
     width: 50%;
     float: left;
     height: 100vh;
+    text-shadow: 0 0 10px #f46b45;
 
 
 }
@@ -44,6 +46,7 @@ export default {
 img{
   margin-left:auto;
   margin-right:auto;
+  
 
 }
 
