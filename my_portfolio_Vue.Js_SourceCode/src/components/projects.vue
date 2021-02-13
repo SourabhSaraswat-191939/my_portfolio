@@ -197,7 +197,7 @@ export default {
                 },
                 {
                     name:'Portfolio',
-                    about:'This Is a food ordering app , in which user can order food and make payment online from his favourite stores .Multiple Seller can sell their foods , and their is one admin who manages all the seller, client and have whole control over this platform.',
+                    about:'This is my Portfolio showing all my skills and some of my projects. You guessed it right! It\'s the one you are looking at right now .',
                     link:'https://github.com/SourabhSaraswat/my_portfolio',
                     time:'5 Days',
                     projectType:'Private Project',
@@ -208,7 +208,7 @@ export default {
                 },
                 {
                     name:'Video Conferecing WebApp UI',
-                    about:'This Is a food ordering app , in which user can order food and make payment online from his favourite stores .Multiple Seller can sell their foods , and their is one admin who manages all the seller, client and have whole control over this platform.',
+                    about:'This is a UI design of Video Conferencing app for Student-Teacher online meetings .',
                     link:'https://github.com/SourabhSaraswat/Video_Meeting_App',
                     time:'3 Days',
                     projectType:'Private Project',
