@@ -37,7 +37,7 @@
     <div v-bind:class="{cube__face:true, cube__face__front:true}">
       <div class="heading">.... Welcome To My Portfolio ....</div>
       <br><br>
-      I Create stuff that people wants
+      I Create stuff that people want .
       <br><br><br>
       <v-btn
         class="ma-2"
@@ -238,7 +238,7 @@ export default {
 
 .radio-toolbar label {
     display: inline-block;
-    background: linear-gradient(120deg,#f46b45,#eea849);
+    background: grey;
     padding: 10px 20px;
     margin: 5px;
     font-family: sans-serif, Arial;
@@ -290,6 +290,7 @@ export default {
   height: 400px;
   /* border:solid 2px black; */
   perspective: 600px;
+  opacity: 0.85;
 }
 
 .cube {
@@ -299,6 +300,7 @@ export default {
   transition: all 0.85s cubic-bezier(0.175,0.885,0.320,1.275);
   transform-style: preserve-3d;
   transform: rotateY(180deg);
+  
 }
 
 .cube__face {

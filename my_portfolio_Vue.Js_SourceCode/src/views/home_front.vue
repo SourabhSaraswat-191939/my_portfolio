@@ -48,6 +48,7 @@ export default {
   height: 100vh;
   background-image: url(../assets/c2.jpg);
   background-size: cover;
+  /* background: black; */
   color: #fff;
   position: relative;
   display: flex;

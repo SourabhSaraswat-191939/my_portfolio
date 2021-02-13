@@ -10,7 +10,7 @@
       tile
     >
       <v-card-title style="background:linear-gradient(120deg,#f46b45,#eea849);">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+        <strong class="subheading">Get connected with me on social networks!</strong>
 
         <v-spacer></v-spacer>
 
@@ -30,7 +30,7 @@
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        Designed and Developed by Sourabh Saraswat
       </v-card-text>
     </v-card>
   </v-footer>
