@@ -231,16 +231,19 @@ export default {
 
 
 <style scoped>
-#projects{
+/* #projects{
   padding: 20px;
-}
+} */
 .events-heading
 {
+    margin: 20px;
   text-align: center;
   font-size: 4em;
   font-weight: 700;
 }
-
+.v-card{
+    border: none;
+}
 .v-card--reveal {
   align-items: center;
   bottom: 0;
