@@ -100,7 +100,7 @@
     <div v-bind:class="{cube__face:true, cube__face__right:true}">
       <div class="heading" style="background:linear-gradient(10deg,#FEAC5E,#C779D0,#4BC0C8);">About Me</div>
       <br><br>
-      Hi! myself Sourabh Saraswat. I am pursuing my undergraduation in Computer Science and Enginnering from Central University Of Haryana . I am a Full Stack Web Developer .I love to know about technologies and pretty much excited to learn new things of modern technical world .MY greatest strength is my positive attitude , even during the most hardest of times.
+      Hi! myself Sourabh Saraswat. I am pursuing my undergraduation in Computer Science and Engineering from Central University Of Haryana . I am a Full Stack Web Developer .I love to know about technologies and pretty much excited to learn new things of modern technical world .MY greatest strength is my positive attitude , even during the most hardest of times.
       <br>I’m constantly Practicing New Technologies .
 
     </div>
