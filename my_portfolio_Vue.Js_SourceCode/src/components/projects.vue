@@ -156,7 +156,7 @@ export default {
                     link:'https://github.com/SourabhSaraswat/Medicare_Solutions_Fronthand.git',
                     time:'Sep 2020 - Oct 2020',
                     projectType:'FreeLancing',
-                    image:[require('@/assets/project_medicare1.png')],
+                    image:[require('@/assets/project_medicare1.png'),require('@/assets/project_medicare2.png'),require('@/assets/project_medicare3.png'),require('@/assets/project_medicare4.png'),require('@/assets/project_medicare5.png')],
                     dialog : false,
                     model: 0,
                     techUsed:'Vue.Js, Django, Django Rest API\'s, Vuetify, PostgreSQL .'

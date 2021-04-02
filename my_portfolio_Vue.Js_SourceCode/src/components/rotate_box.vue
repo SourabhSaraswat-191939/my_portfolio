@@ -58,40 +58,9 @@
       <div class="heading" style="background:linear-gradient(10deg,#8b75f8,#20bdff,#a5fecb);">Technical Skills</div>
       <br><br>
       <div class="text-center">
-        <v-chip class="ma-2 " color="yellow">
-          HTML
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          CSS
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          JAVASCRIPT
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          PHP
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          BOOTSTRAP
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          PYTHON
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          DJANGO
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          MySQL
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          PostgreSQL
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          REST API
-        </v-chip>
-        <v-chip class="ma-2 " color="yellow">
-          VUE.js
-        </v-chip>
-        
+        <v-chip v-for="(skill,i) in skills" :key="i" class="ma-2 " color="yellow">
+          {{skill}}
+        </v-chip>    
       </div>
     </div>
     
@@ -110,27 +79,15 @@
       <div class="heading" style="background: linear-gradient(10deg,#304352,#d7d2cc);">Social Links</div>
       <br>
       <div class="social_links">
-        <v-icon color="#eea849" large>mdi-email-multiple</v-icon> saraswatsourabh5@gmail.com
         <br>
-        <a href="https://www.linkedin.com/in/sourabh-saraswat-1681b61a5/" target="_blank">
-          <v-icon color="#eea849" large>mdi-linkedin</v-icon> Sourabh Saraswat
+        <li><v-icon color="#eea849" large>mdi-email-multiple</v-icon> saraswatsourabh5@gmail.com
+        </li>
+        <li v-for="(social,j) in social_media" :key="j">
+        <a :href="social.link" target="_blank">
+          <v-icon color="#eea849" large>mdi-{{social.icon}}</v-icon> {{social.name}}
         </a>
         <br>
-        <a href="https://github.com/SourabhSaraswat" target="_blank">
-          <v-icon color="#eea849" large>mdi-github</v-icon> Sourabh Saraswat
-        </a>
-        <br>
-        <a href="https://www.instagram.com/ssaraswat/" target="_blank">
-          <v-icon color="#eea849" large>mdi-instagram</v-icon> @ssaraswat
-        </a>
-        <br>
-        <a href="https://twitter.com/SourabhSarasw15" target="_blank">
-          <v-icon color="#eea849" large>mdi-twitter</v-icon> @SourabhSarasw15
-        </a>
-        <br>
-        <a href="https://www.facebook.com/sourabh.saraswat.73/" target="_blank">
-          <v-icon color="#eea849" large>mdi-facebook</v-icon> Sourabh Saraswat
-        </a>
+        </li>
       </div>
     </div>
 
@@ -203,8 +160,6 @@
 
 <script>
 
-
-
 export default {
   name: 'rotate_box',
 
@@ -214,7 +169,14 @@ export default {
 
   data: () => ({
     // collapseOnScroll: true,
-    
+    skills:['HTML','CSS','JAVASCRIPT','PHP','BOOTSTRAP','PYTHON','DJANGO','MySQL','PostgreSQL','REST API','VUE.js'],
+    social_media:[
+      {name:'Sourabh Saraswat',link:'https://www.linkedin.com/in/sourabh-saraswat-1681b61a5/',icon:'linkedin'},
+      {name:'Sourabh Saraswat 191939',link:'https://github.com/SourabhSaraswat-191939',icon:'github'},
+      {name:'@ssaraswat',link:'https://www.instagram.com/ssaraswat/',icon:'instagram'},
+      {name:'@SourabhSarasw15',link:'https://twitter.com/SourabhSarasw15',icon:'twitter'},
+      {name:'Sourabh Saraswat',link:'https://www.facebook.com/sourabh.saraswat.73/',icon:'facebook'}
+    ]
   }),
   methods: {
       
@@ -223,6 +185,9 @@ export default {
 </script>
 
 <style scoped>
+li{
+  list-style: none;
+}
 .radio-toolbar {
   margin: 10px;
   position: relative;
