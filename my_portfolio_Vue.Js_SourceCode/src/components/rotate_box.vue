@@ -79,7 +79,7 @@
       <div class="heading" style="background: linear-gradient(10deg,#304352,#d7d2cc);">Social Links</div>
       <br>
       <div class="social_links">
-        <br>
+        
         <li><v-icon color="#eea849" large>mdi-email-multiple</v-icon> saraswatsourabh5@gmail.com
         </li>
         <li v-for="(social,j) in social_media" :key="j">
@@ -339,15 +339,25 @@ li{
   }
 
   .cube__face__front  {transform: rotateY(  0deg) translateZ(161px); }
-.cube__face__right  {transform: rotateY( 90deg) translateZ(161px);z-index: 1;}
-.cube__face__back   {transform: rotateY(180deg) translateZ(161px); }
-.cube__face__left   {transform: rotateY(-90deg) translateZ(161px); }
-.cube__face__top    {transform: rotateX( 90deg) translateZ(161px);z-index: 1; }
-.cube__face__bottom {transform: rotateX(-90deg) translateZ(161px); }
+  .cube__face__right  {transform: rotateY( 90deg) translateZ(161px);z-index: 1;}
+  .cube__face__back   {transform: rotateY(180deg) translateZ(161px); }
+  .cube__face__left   {transform: rotateY(-90deg) translateZ(161px); }
+  .cube__face__top    {transform: rotateX( 90deg) translateZ(161px);z-index: 1; }
+  .cube__face__bottom {transform: rotateX(-90deg) translateZ(161px); }
 
-.cube__face{
-  overflow: scroll;
-}
+  .cube__face{
+    overflow: scroll;
+  }
 
+  #radio-top:checked ~ .scene .cube{
+    background-image: url('/assets/logo.png');
+    transform: rotateY(180deg);
+  } 
+  #radio-back:checked ~ .scene .cube{
+    transform: rotateX(-90deg);
+  }  
+  .v-application .headline{
+    font-size: 1.2em !important;
+  }
 }
 </style>
