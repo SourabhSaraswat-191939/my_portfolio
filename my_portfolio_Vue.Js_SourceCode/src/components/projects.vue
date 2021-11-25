@@ -74,7 +74,7 @@
                     <!-- project image slider start -->
                     <div>
                         
-                        <v-carousel v-model="project.model">
+                        <v-carousel v-model="project.model" height="auto">
                         <v-carousel-item
                             v-for="(image, j) in project.image"
                             :key="j"
@@ -150,6 +150,17 @@ export default {
             
             
             projects:[
+                {
+                    name:'Text Editor with Cloud Storage',
+                    about:'A Text-Editor that can Open/Save files both on Local System & Cloud using Python, Tkinter, OAuth & Google Drive API. It includes operations like Open, Save, Save As, Text Formatting (font size/style), Customizing Theme. Features Include directly saving and opening files from Google Drive, authentication with Gmail OAuth.',
+                    link:'https://github.com/SourabhSaraswat-191939/Text-Editor-Application',
+                    time:'1 Month',
+                    projectType:'Private Project',
+                    image:[require('@/assets/text-editor-with-cloud-storage/text_editor1.png'),require('@/assets/text-editor-with-cloud-storage/text_editor2.png'),require('@/assets/text-editor-with-cloud-storage/text_editor3.png'),require('@/assets/text-editor-with-cloud-storage/text_editor4.png'),require('@/assets/text-editor-with-cloud-storage/text_editor5.png'),require('@/assets/text-editor-with-cloud-storage/text_editor6.png'),require('@/assets/text-editor-with-cloud-storage/text_editor7.png'),require('@/assets/text-editor-with-cloud-storage/text_editor8.png'),],
+                    dialog : false,
+                    model: 0,
+                    techUsed:'Python, Tkinter, OAuth & Google Drive API.'
+                },
                 {
                     name:'Medicares Solutions',
                     about:'It\'s a platform of a private Company by which they sell their medical products online .Their are multiple features including order status , online payment ,search, email verification, order tracking etc., which will be so helpfull for users . Below this i am not sharing server code ,only fronthand code is shared because of Project Security .',

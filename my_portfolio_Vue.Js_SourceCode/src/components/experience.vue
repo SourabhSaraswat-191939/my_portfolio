@@ -43,9 +43,17 @@
     data: () => ({
       years: [
         {
+          color: 'text--accent-1 red',
+          year: 'Nov 2020 - Jan 2021',
+          role: 'APP DEVELOPMENT INTERN',
+          company: 'Awechemist Technologies PVT. LTD',
+          company_img: require('../assets/expresso.jpeg'),
+          work: 'Worked on a Social Media Application named Expresso using Flutter and its popular packages. Developed the complete frontend with server integration of one of the important modules (i.e. cutesy) of the app. Worked on Models designing, building local databases, and storing data using sqflite package. Developed a Real-Time chatting feature using socket_io_client package and improved as per the user’s feedback.'
+        },
+        {
           color: 'green',
           year: 'Nov 2020 - Jan 2021',
-          role: 'Full Stack Web Developer',
+          role: 'Full Stack Web Developer INTERN',
           company: 'Groocy Retails',
           company_img: require('../assets/groocy.png'),
           work: 'Working as a Web Developer Intern in Groocy RETAILS (OPC) PRIVATE LIMITED Project . Working on Fronthand to design UI, Backend and Server Deployment . As a result of this experience, I’m more excited than ever and feel more-equipped to take on Web Developer Responsibility . I loved fixing and learning from real time bugs , working for developing new functionalities.'
