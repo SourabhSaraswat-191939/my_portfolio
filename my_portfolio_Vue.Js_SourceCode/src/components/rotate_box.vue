@@ -108,11 +108,28 @@
     </div>
 
 
-    <div v-bind:class="{cube__face:true, cube__face__bottom:true}">
+    <div v-bind:class="{cube__face:true, cube__face__bottom:true}" style="overflow: scroll;">
       <div class="heading" style="background: linear-gradient(10deg,#43c6ac,#191654);">My Experience</div>
       <br><br>
       
         <v-container>
+          <v-row dense>
+            <v-col cols="12">
+              <v-card
+                color="#385F73"
+                dark
+              >
+                <v-card-title class="headline" >
+                  <v-icon>mdi-briefcase-outline</v-icon> App Development Intern 
+                </v-card-title>
+                
+
+                <v-card-subtitle>
+                  Internship (Aug. 2021-Oct. 2021)<br>
+                  Company : Awechemist Technologies PVT. LTD</v-card-subtitle>
+              </v-card>
+            </v-col>
+          </v-row>
           <v-row dense>
             <v-col cols="12">
               <v-card color="#385F73" dark>
@@ -144,6 +161,7 @@
               </v-card>
             </v-col>
           </v-row>
+          
         </v-container>
         
     </div>

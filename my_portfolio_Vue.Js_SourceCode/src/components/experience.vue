@@ -11,25 +11,25 @@
       large
     >
     <template v-slot:icon>
-        <v-avatar>
+        <v-avatar style="background-color:white;" >
           <img :src="year.company_img">
         </v-avatar>
     </template>
       <template v-slot:opposite>
         <span
-          :class="`headline font-weight-bold ${year.color}--text`"
+          :class="`headline font-weight-light ${year.color}--text`"
           v-text="year.year"
         ></span>
       </template>
       <div class="py-4">
-        <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
+        <h2 :class="`headline font-weight-bold mb-4 ${year.color}--text`">
           {{year.role}}
         </h2>
         <h3>
           {{year.company}}
         </h3>
-        <div>
-          {{year.work}}
+        <div v-html="year.work">
+          <!-- {{year.work}} -->
         </div>
       </div>
     </v-timeline-item>
@@ -44,7 +44,15 @@
       years: [
         {
           color: 'text--accent-1 red',
-          year: 'Nov 2020 - Jan 2021',
+          year: 'Aug 2021 - Dec 2021',
+          role: 'Vue.Js Mentor',
+          company: 'GirlScript Winter of Contributing',
+          company_img: require('../assets/GWOC.png'),
+          work: 'This was a 3 months journey with GirlScript Winter of Contributing as a Mentor for Vue.Js. It was a great experience with #opensource and I must say that I learned a lot while mentoring contributors to contribute and by solving their doubts. <br/>At the end of program I was selected as one of the #Top_Mentor under FRONTEND WEB DEVELOPMENT WITH #REACT, #ANGULAR, AND #VUE  domain. Specifically, I was mentoring for #Vue.'
+        },
+        {
+          color: 'text--accent-1 red',
+          year: 'Aug 2021 - Oct 2021',
           role: 'APP DEVELOPMENT INTERN',
           company: 'Awechemist Technologies PVT. LTD',
           company_img: require('../assets/expresso.jpeg'),
@@ -83,3 +91,5 @@
   font-weight: 700;
 }
 </style>
+
+

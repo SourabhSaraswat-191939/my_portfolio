@@ -4,7 +4,7 @@
         <img src="../assets/mine.png" height="50%" width="50%"/>
         <br>
         <h1 class="name">SOURABH SARASWAT</h1>
-        I am a Full Stack Web Developer
+        I am a Full Stack Developer
         
     </div>
 </template>
