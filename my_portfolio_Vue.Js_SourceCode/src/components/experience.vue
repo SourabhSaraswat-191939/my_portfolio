@@ -43,7 +43,7 @@
     data: () => ({
       years: [
         {
-          color: 'text--accent-1 red',
+          color: 'orange',
           year: 'Aug 2021 - Dec 2021',
           role: 'Vue.Js Mentor',
           company: 'GirlScript Winter of Contributing',
