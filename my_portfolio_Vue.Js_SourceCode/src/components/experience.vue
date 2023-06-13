@@ -42,6 +42,14 @@
   export default {
     data: () => ({
       years: [
+      {
+          color: 'green',
+          year: 'Feb 2023 - Present',
+          role: 'Software Development Engineer',
+          company: 'GeeksForGeeks',
+          company_img: require('../assets/GFG.png'),
+          work: 'Working on a GeeksforGeeks practice and job portal using Django and Next.js which is used by Millions of peoples. Worked on developing features on Contest, Job Recommendation, Report Issue and on some Internal Dashboards.<br/>Conducted thorough bug analysis and successfully resolved a variety of software issues.'
+        },
         {
           color: 'orange',
           year: 'Aug 2021 - Dec 2021',
